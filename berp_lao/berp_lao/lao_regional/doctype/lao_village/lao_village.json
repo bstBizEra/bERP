@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-07-23 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "village_name_lo",
+  "village_name_en",
+  "district",
+  "village_code",
+  "latitude",
+  "longitude"
+ ],
+ "fields": [
+  {
+   "fieldname": "village_name_lo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Village Name (Lao / ຊື່ບ້ານ)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "village_name_en",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Village Name (English)"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "District (ເມືອງ)",
+   "options": "Lao District",
+   "reqd": 1
+  },
+  {
+   "fieldname": "village_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Village Code"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-23 12:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Lao Regional",
+ "name": "Lao Village",
+ "naming_rule": "Expression",
+ "autoname": "format:{district}-{village_name_lo}",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

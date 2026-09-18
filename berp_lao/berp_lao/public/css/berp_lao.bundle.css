@@ -1,0 +1,8 @@
+/* Copyright (c) 2026, BizEra / BSTBizEra and contributors
+   License: GNU General Public License v3. See license.txt
+
+   Entry point for the Desk CSS bundle. Frappe's esbuild pipeline compiles every
+   *.bundle.css under public/ into public/dist/css/<name>.bundle.<hash>.css and
+   hooks.py references it as "berp_lao.bundle.css". */
+
+@import "./lao_fonts.css";

@@ -1,0 +1,129 @@
+{#-
+  Lao withholding tax certificate.
+
+  THE FONT CONTRACT — BERP-LAO-ARCH-001 ADR-A4.
+  This template names the Lao families and declares NO @font-face. On the
+  supported wkhtmltopdf stack an @font-face rule overrides the fontconfig lookup,
+  fails, and takes the Lao text with it — measured, not assumed. The faces must be
+  installed on the machine that renders PDFs: scripts/install-lao-fonts.sh.
+
+  Severity if that is skipped: DejaVu covers the Lao block, so this document does
+  not render boxes. It renders Lao with the combining marks in the wrong order, on
+  a certificate a supplier will file with the Revenue Department.
+-#}
+<div class="lao-wht-certificate">
+<style>
+  .lao-wht-certificate,
+  .lao-wht-certificate * {
+    font-family: "Phetsarath", "Noto Sans Lao", "Saysettha OT", serif;
+  }
+  .lao-wht-certificate { color: #111; font-size: 11pt; line-height: 1.5; }
+  .lao-wht-certificate .hdr { text-align: center; margin-bottom: 18px; }
+  .lao-wht-certificate .hdr .lo { font-size: 16pt; font-weight: bold; }
+  .lao-wht-certificate .hdr .en { font-size: 11pt; letter-spacing: .04em; text-transform: uppercase; }
+  .lao-wht-certificate .hdr .ref { font-size: 9.5pt; color: #555; margin-top: 6px; }
+  .lao-wht-certificate .parties { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+  .lao-wht-certificate .parties td { vertical-align: top; width: 50%; padding: 8px 10px; border: 1px solid #999; }
+  .lao-wht-certificate .parties .role { font-size: 9pt; text-transform: uppercase; letter-spacing: .06em; color: #555; }
+  .lao-wht-certificate .parties .nm { font-weight: bold; }
+  .lao-wht-certificate .period { margin-bottom: 12px; font-size: 10.5pt; }
+  .lao-wht-certificate table.lines { width: 100%; border-collapse: collapse; font-size: 10pt; }
+  .lao-wht-certificate table.lines th,
+  .lao-wht-certificate table.lines td { border: 1px solid #999; padding: 5px 7px; }
+  .lao-wht-certificate table.lines th { background: #eee; text-align: left; font-size: 9.5pt; }
+  .lao-wht-certificate table.lines td.num { text-align: right; }
+  .lao-wht-certificate table.lines tfoot td { font-weight: bold; background: #f5f5f5; }
+  .lao-wht-certificate .words { margin-top: 10px; font-size: 10.5pt; }
+  .lao-wht-certificate .words .v { font-weight: bold; }
+  .lao-wht-certificate .statute { margin-top: 14px; font-size: 9.5pt; color: #444; }
+  .lao-wht-certificate .sign { margin-top: 34px; width: 100%; }
+  .lao-wht-certificate .sign td { width: 50%; padding-top: 34px; border-top: 1px solid #333; font-size: 10pt; text-align: center; }
+  .lao-wht-certificate .notfit { border: 2px solid #a00; padding: 9px 11px; margin-bottom: 14px; font-size: 10pt; color: #a00; }
+  .lao-wht-certificate .notfit ul { margin: 5px 0 0 18px; padding: 0; }
+</style>
+
+{%- if problems %}
+  <div class="notfit">
+    <strong>ຍັງບໍ່ພ້ອມອອກ / NOT FIT TO ISSUE</strong>
+    <ul>{% for p in problems %}<li>{{ p }}</li>{% endfor %}</ul>
+  </div>
+{%- endif %}
+
+<div class="hdr">
+  <div class="lo">ໃບຢັ້ງຢືນການຫັກພາສີ ທີ່ແຫຼ່ງ</div>
+  <div class="en">Withholding Tax Certificate</div>
+  <div class="ref">{{ c.period_from }} &ndash; {{ c.period_to }} &middot; printed {{ printed_on }}</div>
+</div>
+
+<table class="parties">
+  <tr>
+    <td>
+      <div class="role">ຜູ້ຫັກພາສີ / Withholding agent</div>
+      <div class="nm">{{ c.company }}</div>
+      <div>ເລກປະຈຳຕົວ / TIN: {{ c.agent_tax_id or "—" }}</div>
+      {%- if c.agent_registration %}<div>ທະບຽນວິສາຫະກິດ / Reg: {{ c.agent_registration }}</div>{% endif %}
+    </td>
+    <td>
+      <div class="role">ຜູ້ຖືກຫັກ / Supplier</div>
+      <div class="nm">{{ c.supplier_name }}</div>
+      <div>ເລກປະຈຳຕົວ / TIN: {{ c.supplier_tax_id or "—" }}</div>
+    </td>
+  </tr>
+</table>
+
+<div class="period">
+  ງວດ / Period: <strong>{{ c.period_from }}</strong> ເຖິງ / to <strong>{{ c.period_to }}</strong>
+  &middot; ສະກຸນເງິນ / Currency: <strong>{{ c.currency }}</strong>
+</div>
+
+<table class="lines">
+  <thead>
+    <tr>
+      <th>ວັນທີ<br>Date</th>
+      <th>ເອກະສານ<br>Document</th>
+      <th>ປະເພດ<br>Category</th>
+      <th class="num">ມູນຄ່າສຸດທິ<br>Net</th>
+      <th class="num">ອັດຕາ<br>Rate</th>
+      <th class="num">ຫັກໄວ້<br>Withheld</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%- for line in c.lines %}
+    <tr>
+      <td>{{ line.posting_date }}</td>
+      <td>{{ line.voucher_no }}{% if line.supplier_invoice_no %}<br><small>{{ line.supplier_invoice_no }}</small>{% endif %}</td>
+      <td>{{ line.category or "—" }}</td>
+      <td class="num">{{ "{:,.0f}".format(line.net_amount) }}</td>
+      <td class="num">{{ "{:g}".format(line.rate) }}%</td>
+      <td class="num">{{ "{:,.0f}".format(line.tax_amount) }}</td>
+    </tr>
+    {%- else %}
+    <tr><td colspan="6">ບໍ່ມີການຫັກພາສີໃນງວດນີ້ / Nothing withheld in this period.</td></tr>
+    {%- endfor %}
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">ລວມ / Total</td>
+      <td class="num">{{ "{:,.0f}".format(c.total_net) }}</td>
+      <td></td>
+      <td class="num">{{ "{:,.0f}".format(c.total_withheld) }}</td>
+    </tr>
+  </tfoot>
+</table>
+
+{%- if c.total_withheld_in_words %}
+<div class="words">ຈຳນວນເງິນເປັນຕົວອັກສອນ / Amount in words: <span class="v">{{ c.total_withheld_in_words }}</span></div>
+{%- endif %}
+
+<div class="statute">
+  ຫັກຕາມ {{ c.statute }} &middot; Withheld under {{ c.statute }}. This certificate is the
+  supplier's evidence of tax withheld at source and paid on their behalf.
+</div>
+
+<table class="sign">
+  <tr>
+    <td>ຜູ້ຫັກພາສີ / For the withholding agent<br><small>{{ c.company }}</small></td>
+    <td>ຜູ້ຮັບ / Received by<br><small>{{ c.supplier_name }}</small></td>
+  </tr>
+</table>
+</div>

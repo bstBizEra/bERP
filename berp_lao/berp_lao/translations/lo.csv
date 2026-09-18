@@ -1,0 +1,83 @@
+"This is a Lao {0} invoice but it has no 10% VAT row. Add 'VAT 10% (ອາກອນ 10%)' to the taxes table, or set the Invoice Type to 'Export (0%)' or 'VAT Exempt'.",ໃບເກັບເງິນລາວປະເພດ {0} ນີ້ ບໍ່ມີແຖວອາກອນມູນຄ່າເພີ່ມ 10%. ກະລຸນາເພີ່ມ 'ອາກອນ 10%' ໃສ່ຕາຕະລາງອາກອນ ຫຼື ປ່ຽນປະເພດໃບເກັບເງິນເປັນ 'ສົ່ງອອກ (0%)' ຫຼື 'ປອດອາກອນ'.
+Lao VAT Notice,ແຈ້ງເຕືອນອາກອນມູນຄ່າເພີ່ມ
+"For invoices of {0} LAK or more, the customer's Lao Tax ID (ເລກປະຈຳຕົວ) should be recorded for VAT compliance.",ສຳລັບໃບເກັບເງິນມູນຄ່າ {0} ກີບ ຂຶ້ນໄປ ຕ້ອງບັນທຶກເລກປະຈຳຕົວຜູ້ເສຍອາກອນຂອງລູກຄ້າ ເພື່ອໃຫ້ຖືກຕ້ອງຕາມລະບຽບອາກອນ.
+Lao Tax Compliance,ຄວາມຖືກຕ້ອງດ້ານອາກອນ
+"No Withholding Tax category is set on this Purchase Invoice. If this is a service purchase from a Lao resident, WHT 10% (ອາກອນຫັກ ທີ່ແຫຼ່ງ 10%) may apply.",ໃບເກັບເງິນຊື້ນີ້ຍັງບໍ່ໄດ້ກຳນົດປະເພດອາກອນຫັກ ທີ່ແຫຼ່ງ. ຖ້າເປັນການຊື້ບໍລິການຈາກຜູ້ພັກອາໄສຢູ່ ສປປ ລາວ ອາດຕ້ອງຫັກອາກອນ 10%.
+Lao WHT Notice,ແຈ້ງເຕືອນອາກອນຫັກ ທີ່ແຫຼ່ງ
+Lao companies should use LAK (Lao Kip ₭) as the default currency.,ບໍລິສັດລາວຄວນໃຊ້ ກີບ (LAK ₭) ເປັນສະກຸນເງິນຫຼັກ.
+Lao Currency Notice,ແຈ້ງເຕືອນສະກຸນເງິນ
+Village name in Lao (ຊື່ບ້ານ) is required.,ຕ້ອງໃສ່ຊື່ບ້ານເປັນພາສາລາວ.
+Lao District is required for a village.,ຕ້ອງລະບຸເມືອງສຳລັບບ້ານ.
+District name in Lao (ຊື່ເມືອງ) is required.,ຕ້ອງໃສ່ຊື່ເມືອງເປັນພາສາລາວ.
+Lao Province is required for a district.,ຕ້ອງລະບຸແຂວງສຳລັບເມືອງ.
+Province name in Lao (ຊື່ແຂວງ) is required.,ຕ້ອງໃສ່ຊື່ແຂວງເປັນພາສາລາວ.
+{0} is not a Lao company — its country is {1}.,{0} ບໍ່ແມ່ນບໍລິສັດລາວ — ປະເທດຂອງມັນແມ່ນ {1}.
+{0} already has General Ledger entries. The Chart of Accounts cannot be replaced once transactions have been posted.,{0} ມີລາຍການບັນຊີແຍກປະເພດແລ້ວ. ບໍ່ສາມາດປ່ຽນຜັງບັນຊີໄດ້ ຫຼັງຈາກມີການລົງບັນຊີແລ້ວ.
+{0} already has a Chart of Accounts. Re-run with Force to replace it.,{0} ມີຜັງບັນຊີຢູ່ແລ້ວ. ດຳເນີນການໃໝ່ດ້ວຍ Force ເພື່ອທົດແທນ.
+Lao PCG Chart of Accounts created for {0}.,ສ້າງຜັງບັນຊີ PCG ລາວ ໃຫ້ {0} ສຳເລັດແລ້ວ.
+Chart of Accounts Installed,ຕິດຕັ້ງຜັງບັນຊີແລ້ວ
+Company,ບໍລິສັດ
+From Date,ແຕ່ວັນທີ
+To Date,ຫາວັນທີ
+{0} is required.,ຕ້ອງລະບຸ {0}.
+From Date must be on or before To Date.,ແຕ່ວັນທີ ຕ້ອງເທົ່າກັບ ຫຼື ກ່ອນ ຫາວັນທີ.
+{0} is registered in {1}. The Lao VAT Return applies to Lao companies only.,{0} ຈົດທະບຽນຢູ່ {1}. ໃບແຈ້ງອາກອນມູນຄ່າເພີ່ມລາວ ໃຊ້ໄດ້ສະເພາະບໍລິສັດລາວເທົ່ານັ້ນ.
+an unknown country,ປະເທດທີ່ບໍ່ຮູ້ຈັກ
+Section (ລາຍການ),ລາຍການ
+Net Amount,ມູນຄ່າສຸດທິ
+VAT Rate,ອັດຕາອາກອນ
+VAT Amount,ຈຳນວນອາກອນ
+Invoices,ຈຳນວນໃບເກັບເງິນ
+OUTPUT VAT — SALES (ອາກອນຂາຍ),ອາກອນຂາເອົາອອກ — ການຂາຍ (ອາກອນຂາຍ)
+1. Standard domestic sales (ຂາຍພາຍໃນ 10%),1. ຂາຍພາຍໃນອັດຕາປົກກະຕິ (ຂາຍພາຍໃນ 10%)
+"2. Export sales, zero-rated (ຂາຍອອກ 0%)",2. ຂາຍສົ່ງອອກ ອັດຕາສູນ (ຂາຍອອກ 0%)
+3. VAT-exempt sales (ຂາຍປອດອາກອນ),3. ຂາຍປອດອາກອນ
+4. Total output VAT (ລວມອາກອນຂາຍ),4. ລວມອາກອນຂາຍ
+INPUT VAT — PURCHASES (ອາກອນຊື້),ອາກອນຂາເອົາເຂົ້າ — ການຊື້ (ອາກອນຊື້)
+5. Purchases eligible for input VAT (ຊື້ພາຍໃນ 10%),5. ການຊື້ທີ່ຫັກອາກອນຂາເຂົ້າໄດ້ (ຊື້ພາຍໃນ 10%)
+6. Total input VAT (ລວມອາກອນຊື້),6. ລວມອາກອນຊື້
+7. Net VAT payable / (claimable) (ອາກອນຕ້ອງມອບສຸດທິ),7. ອາກອນຕ້ອງມອບສຸດທິ / (ຂໍຄືນ)
+Output VAT,ອາກອນຂາຍ
+Input VAT,ອາກອນຊື້
+Net VAT Payable,ອາກອນຕ້ອງມອບສຸດທິ
+Net VAT Claimable,ອາກອນຂໍຄືນສຸດທິ
+{0} is not a Lao company.,{0} ບໍ່ແມ່ນບໍລິສັດລາວ.
+"Created {0} tax template(s). These PCG accounts were not found on {1}, so the templates that use them were skipped: {2}. Install the Lao PCG Chart of Accounts first.",ສ້າງແມ່ແບບອາກອນ {0} ລາຍການ. ບໍ່ພົບບັນຊີ PCG ເຫຼົ່ານີ້ໃນ {1} ຈຶ່ງຂ້າມແມ່ແບບທີ່ໃຊ້ມັນ: {2}. ກະລຸນາຕິດຕັ້ງຜັງບັນຊີ PCG ລາວ ກ່ອນ.
+Lao Tax Templates,ແມ່ແບບອາກອນລາວ
+Created {0} tax template(s) for {1}; {2} already existed.,ສ້າງແມ່ແບບອາກອນ {0} ລາຍການ ໃຫ້ {1}; ມີຢູ່ແລ້ວ {2} ລາຍການ.
+Lao Localisation Active (ພາສາລາວ),ເປີດໃຊ້ການປັບແຕ່ງສຳລັບ ສປປ ລາວ
+Install Lao PCG Chart of Accounts,ຕິດຕັ້ງຜັງບັນຊີ PCG ລາວ
+Lao Tools,ເຄື່ອງມືລາວ
+Create Lao VAT / WHT Templates,ສ້າງແມ່ແບບອາກອນ VAT / ອາກອນຫັກ ທີ່ແຫຼ່ງ
+Default currency set to LAK (₭). Use Lao Tools to install the PCG Chart of Accounts.,ກຳນົດສະກຸນເງິນຫຼັກເປັນ ກີບ (₭) ແລ້ວ. ໃຊ້ 'ເຄື່ອງມືລາວ' ເພື່ອຕິດຕັ້ງຜັງບັນຊີ PCG.
+This replaces the Chart of Accounts for {0} with the Lao PCG (8-class) chart. Any existing accounts that have never been posted to will be removed. Continue?,ການດຳເນີນການນີ້ຈະປ່ຽນຜັງບັນຊີຂອງ {0} ເປັນຜັງບັນຊີ PCG ລາວ (8 ໝວດ). ບັນຊີເກົ່າທີ່ຍັງບໍ່ເຄີຍລົງບັນຊີຈະຖືກລຶບ. ດຳເນີນການຕໍ່ບໍ?
+Creating Lao PCG Chart of Accounts…,ກຳລັງສ້າງຜັງບັນຊີ PCG ລາວ…
+Creating Lao VAT / WHT templates…,ກຳລັງສ້າງແມ່ແບບອາກອນ VAT / ອາກອນຫັກ ທີ່ແຫຼ່ງ…
+Lao VAT Compliance Check,ກວດສອບຄວາມຖືກຕ້ອງອາກອນ VAT
+Invoice Type is {0} but a 10% VAT row is present.,ປະເພດໃບເກັບເງິນແມ່ນ {0} ແຕ່ມີແຖວອາກອນ 10% ຢູ່.
+Lao {0} invoices require VAT 10% (ອາກອນ 10%).,ໃບເກັບເງິນລາວປະເພດ {0} ຕ້ອງມີອາກອນ 10%.
+Lao VAT treatment looks correct (ອາກອນ 10% ຖືກຕ້ອງ).,ການຄິດໄລ່ອາກອນຖືກຕ້ອງແລ້ວ (ອາກອນ 10% ຖືກຕ້ອງ).
+Lao Village,ບ້ານ
+Village Name (Lao / ຊື່ບ້ານ),ຊື່ບ້ານ (ພາສາລາວ)
+Village Name (English),ຊື່ບ້ານ (ພາສາອັງກິດ)
+District (ເມືອງ),ເມືອງ
+Village Code,ລະຫັດບ້ານ
+Latitude,ເສັ້ນຮຸ້ງ
+Longitude,ເສັ້ນແວງ
+Lao District,ເມືອງ
+District Name (Lao / ຊື່ເມືອງ),ຊື່ເມືອງ (ພາສາລາວ)
+District Name (English),ຊື່ເມືອງ (ພາສາອັງກິດ)
+Province (ແຂວງ),ແຂວງ
+District Code,ລະຫັດເມືອງ
+Lao Province,ແຂວງ
+Province Name (English),ຊື່ແຂວງ (ພາສາອັງກິດ)
+ຊື່ແຂວງ (ພາສາລາວ),ຊື່ແຂວງ (ພາສາລາວ)
+Province Code,ລະຫັດແຂວງ
+Capital City (English),ເມືອງເອກ (ພາສາອັງກິດ)
+ເມືອງຫຼວງ (ລາວ),ເມືອງເອກ (ພາສາລາວ)
+Number of Districts,ຈຳນວນເມືອງ
+Geographic Info,ຂໍ້ມູນພູມສາດ
+Region,ພາກ
+North,ພາກເໜືອ
+Central,ພາກກາງ
+South,ພາກໃຕ້

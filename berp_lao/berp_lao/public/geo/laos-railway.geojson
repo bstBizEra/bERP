@@ -1,0 +1,8 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"kind":"line","name":"Laos-China Railway","name_lo":"ທາງລົດໄຟ ລາວ-ຈີນ"},"geometry":{"type":"LineString","coordinates":[[101.6829,21.2954],[101.9905,20.6900],[102.1357,20.2000],[102.1640,19.8870],[102.4470,18.9230],[102.4100,18.4900],[102.5700,18.1200],[102.6300,17.9870]]}},
+{"type":"Feature","properties":{"kind":"station","name":"Boten","name_lo":"ບໍ່ເຕັນ"},"geometry":{"type":"Point","coordinates":[101.6829,21.2954]}},
+{"type":"Feature","properties":{"kind":"station","name":"Oudomxay (Muang Xay)","name_lo":"ອຸດົມໄຊ"},"geometry":{"type":"Point","coordinates":[101.9905,20.6900]}},
+{"type":"Feature","properties":{"kind":"station","name":"Luang Prabang","name_lo":"ຫຼວງພະບາງ"},"geometry":{"type":"Point","coordinates":[102.1640,19.8870]}},
+{"type":"Feature","properties":{"kind":"station","name":"Vang Vieng","name_lo":"ວັງວຽງ"},"geometry":{"type":"Point","coordinates":[102.4470,18.9230]}},
+{"type":"Feature","properties":{"kind":"station","name":"Vientiane","name_lo":"ນະຄອນຫຼວງວຽງຈັນ"},"geometry":{"type":"Point","coordinates":[102.6300,17.9870]}}
+]}

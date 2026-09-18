@@ -1,0 +1,200 @@
+[
+  {
+    "doctype": "Lao Province",
+    "name": "Vientiane Capital",
+    "province_name_en": "Vientiane Capital",
+    "province_name_lo": "ນະຄອນຫຼວງວຽງຈັນ",
+    "province_code": "LA-VT",
+    "capital": "Vientiane",
+    "capital_lo": "ວຽງຈັນ",
+    "districts_count": 9,
+    "region": "Central"
+  },
+  {
+    "doctype": "Lao Province",
+    "name": "Phongsaly",
+    "province_name_en": "Phongsaly",
+    "province_name_lo": "ຜົ້ງສາລີ",
+    "province_code": "LA-PH",
+    "capital": "Phongsaly",
+    "capital_lo": "ຜົ້ງສາລີ",
+    "districts_count": 7,
+    "region": "North"
+  },
+  {
+    "doctype": "Lao Province",
+    "name": "Luang Namtha",
+    "province_name_en": "Luang Namtha",
+    "province_name_lo": "ຫຼວງນ້ຳທາ",
+    "province_code": "LA-LM",
+    "capital": "Luang Namtha",
+    "capital_lo": "ຫຼວງນ້ຳທາ",
+    "districts_count": 5,
+    "region": "North"
+  },
+  {
+    "doctype": "Lao Province",
+    "name": "Oudomxay",
+    "province_name_en": "Oudomxay",
+    "province_name_lo": "ອຸດົມໄຊ",
+    "province_code": "LA-OU",
+    "capital": "Muang Xay",
+    "capital_lo": "ເມືອງໄຊ",
+    "districts_count": 7,
+    "region": "North"
+  },
+  {
+    "doctype": "Lao Province",
+    "name": "Bokeo",
+    "province_name_en": "Bokeo",
+    "province_name_lo": "ບໍ່ແກ້ວ",
+    "province_code": "LA-BK",
+    "capital": "Houayxay",
+    "capital_lo": "ຫ້ວຍຊາຍ",
+    "districts_count": 5,
+    "region": "North"
+  },
+  {
+    "doctype": "Lao Province",
+    "name": "Luang Prabang",
+    "province_name_en": "Luang Prabang",
+    "province_name_lo": "ຫຼວງພະບາງ",
+    "province_code": "LA-LP",
+    "capital": "Luang Prabang",
+    "capital_lo": "ຫຼວງພະບາງ",
+    "districts_count": 12,
+    "region": "North"
+  },
+  {
+    "doctype": "Lao Province",
+    "name": "Houaphanh",
+    "province_name_en": "Houaphanh",
+    "province_name_lo": "ຫົວພັນ",
+    "province_code": "LA-HO",
+    "capital": "Xam Neua",
+    "capital_lo": "ຊໍາເໜືອ",
+    "districts_count": 10,
+    "region": "North"
+  },
+  {
+    "doctype": "Lao Province",
+    "name": "Xaignabouri",
+    "province_name_en": "Xaignabouri",
+    "province_name_lo": "ໄຊຍະບູລີ",
+    "province_code": "LA-XA",
+    "capital": "Xaignabouri",
+    "capital_lo": "ໄຊຍະບູລີ",
+    "districts_count": 11,
+    "region": "North"
+  },
+  {
+    "doctype": "Lao Province",
+    "name": "Xiengkhouang",
+    "province_name_en": "Xiengkhouang",
+    "province_name_lo": "ຊຽງຂວາງ",
+    "province_code": "LA-XI",
+    "capital": "Phonsavan",
+    "capital_lo": "ໂພນສະຫວັນ",
+    "districts_count": 7,
+    "region": "North"
+  },
+  {
+    "doctype": "Lao Province",
+    "name": "Vientiane Province",
+    "province_name_en": "Vientiane Province",
+    "province_name_lo": "ວຽງຈັນ",
+    "province_code": "LA-VI",
+    "capital": "Phonhong",
+    "capital_lo": "ໂພນໂຮງ",
+    "districts_count": 11,
+    "region": "Central"
+  },
+  {
+    "doctype": "Lao Province",
+    "name": "Bolikhamxai",
+    "province_name_en": "Bolikhamxai",
+    "province_name_lo": "ບໍລິຄຳໄຊ",
+    "province_code": "LA-BL",
+    "capital": "Paksan",
+    "capital_lo": "ປາກຊັນ",
+    "districts_count": 7,
+    "region": "Central"
+  },
+  {
+    "doctype": "Lao Province",
+    "name": "Khammouane",
+    "province_name_en": "Khammouane",
+    "province_name_lo": "ຄຳມ່ວນ",
+    "province_code": "LA-KH",
+    "capital": "Thakhek",
+    "capital_lo": "ທ່າແຂກ",
+    "districts_count": 10,
+    "region": "Central"
+  },
+  {
+    "doctype": "Lao Province",
+    "name": "Savannakhet",
+    "province_name_en": "Savannakhet",
+    "province_name_lo": "ສະຫວັນນະເຂດ",
+    "province_code": "LA-SV",
+    "capital": "Kaysone Phomvihane",
+    "capital_lo": "ໄກສອນ ພົມວິຫານ",
+    "districts_count": 15,
+    "region": "South"
+  },
+  {
+    "doctype": "Lao Province",
+    "name": "Salavan",
+    "province_name_en": "Salavan",
+    "province_name_lo": "ສາລະວັນ",
+    "province_code": "LA-SL",
+    "capital": "Salavan",
+    "capital_lo": "ສາລະວັນ",
+    "districts_count": 8,
+    "region": "South"
+  },
+  {
+    "doctype": "Lao Province",
+    "name": "Sekong",
+    "province_name_en": "Sekong",
+    "province_name_lo": "ເຊກອງ",
+    "province_code": "LA-XE",
+    "capital": "Sekong",
+    "capital_lo": "ເຊກອງ",
+    "districts_count": 4,
+    "region": "South"
+  },
+  {
+    "doctype": "Lao Province",
+    "name": "Champasak",
+    "province_name_en": "Champasak",
+    "province_name_lo": "ຈຳປາສັກ",
+    "province_code": "LA-CH",
+    "capital": "Pakse",
+    "capital_lo": "ປາກເຊ",
+    "districts_count": 10,
+    "region": "South"
+  },
+  {
+    "doctype": "Lao Province",
+    "name": "Attapeu",
+    "province_name_en": "Attapeu",
+    "province_name_lo": "ອັດຕະປື",
+    "province_code": "LA-AT",
+    "capital": "Attapeu",
+    "capital_lo": "ອັດຕະປື",
+    "districts_count": 5,
+    "region": "South"
+  },
+  {
+    "doctype": "Lao Province",
+    "name": "Xaisomboun",
+    "province_name_en": "Xaisomboun",
+    "province_name_lo": "ໄຊສົມບູນ",
+    "province_code": "LA-XN",
+    "capital": "Anouvong",
+    "capital_lo": "ອານຸວົງ",
+    "districts_count": 5,
+    "region": "Central"
+  }
+]

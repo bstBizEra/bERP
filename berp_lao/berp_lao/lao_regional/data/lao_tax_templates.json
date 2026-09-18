@@ -1,0 +1,226 @@
+{
+	"_comment": [
+		"Lao PDR tax templates, keyed by PCG account number rather than by account name.",
+		"Account names in ERPNext are company-scoped ('4412 - VAT Output Tax - ABC'), so these",
+		"records cannot be plain Frappe fixtures - berp_lao.setup.tax_templates resolves each",
+		"account_number against the target company and builds the documents at install time.",
+		"",
+		"Sources for the rates below:",
+		"  VAT 10% - Presidential Decree No. 003/PS, effective 1 May 2024.",
+		"  WHT     - Law on Income Tax No. 88/NA, gazetted 19 June 2026, in force",
+		"            1 July 2026, replacing the 2019 Income Tax Law. It raised",
+		"            construction & repair 2% -> 5%, online sales 2% -> 10% and",
+		"            commissions/consultancy/service fees 5% -> 10%, and lowered sports",
+		"            & performing arts 10% -> 5%. Cross-checked against PwC Worldwide Tax",
+		"            Summaries (Lao PDR, reviewed 7 August 2026), whose table still shows",
+		"            the pre-88/NA rate for consultancy and for artists/athletes - where",
+		"            the two disagree the dated rows follow 88/NA.",
+		"",
+		"Each withholding category carries a 'rates' list so a statutory rate change is a new",
+		"dated row rather than an edit that loses the old rate."
+	],
+	"sales_taxes_and_charges_templates": [
+		{
+			"title": "VAT 10% (ອາກອນ 10%)",
+			"is_default": 1,
+			"taxes": [
+				{
+					"charge_type": "On Net Total",
+					"account_number": "4412",
+					"rate": 10.0,
+					"description": "Lao PDR VAT 10% (effective 1 May 2024)"
+				}
+			]
+		},
+		{
+			"title": "VAT 0% - Export (ອາກອນ 0% ປອດອາກອນ)",
+			"is_default": 0,
+			"taxes": [
+				{
+					"charge_type": "On Net Total",
+					"account_number": "4412",
+					"rate": 0.0,
+					"description": "Zero-rated VAT for exports"
+				}
+			]
+		}
+	],
+	"purchase_taxes_and_charges_templates": [
+		{
+			"title": "VAT 10% Input (ອາກອນ VAT ຊື້)",
+			"is_default": 1,
+			"taxes": [
+				{
+					"charge_type": "On Net Total",
+					"account_number": "4411",
+					"add_deduct_tax": "Add",
+					"category": "Total",
+					"rate": 10.0,
+					"description": "Lao PDR Input VAT 10%"
+				}
+			]
+		}
+	],
+	"tax_withholding_categories": [
+		{
+			"name": "WHT - Services & Consulting 10% (ຮ.ຕ. ບໍລິການ)",
+			"category_name": "Services",
+			"account_number": "4431",
+			"rates": [
+				{
+					"from_date": "2024-01-01",
+					"to_date": "2026-06-30",
+					"rate": 5.0
+				},
+				{
+					"from_date": "2026-07-01",
+					"to_date": "2099-12-31",
+					"rate": 10.0
+				}
+			]
+		},
+		{
+			"name": "WHT - Dividends & Interest 10% (ຮ.ຕ. ເງິນປັນຜົນ)",
+			"category_name": "Dividends",
+			"account_number": "4432",
+			"rates": [
+				{
+					"from_date": "2024-01-01",
+					"to_date": "2099-12-31",
+					"rate": 10.0
+				}
+			]
+		},
+		{
+			"name": "WHT - Lease of Assets 10% (ຮ.ຕ. ຄ່າເຊົ່າ)",
+			"category_name": "Rental",
+			"account_number": "4433",
+			"rates": [
+				{
+					"from_date": "2024-01-01",
+					"to_date": "2099-12-31",
+					"rate": 10.0
+				}
+			]
+		},
+		{
+			"name": "WHT - Teaching & Research 5% (ຮ.ຕ. ຄ່າສອນ)",
+			"category_name": "Teaching",
+			"account_number": "4434",
+			"rates": [
+				{
+					"from_date": "2024-01-01",
+					"to_date": "2099-12-31",
+					"rate": 5.0
+				}
+			]
+		},
+		{
+			"name": "WHT - Royalties 5% (ຮ.ຕ. ຄ່າລິຂະສິດ)",
+			"category_name": "Royalties",
+			"account_number": "4435",
+			"rates": [
+				{
+					"from_date": "2024-01-01",
+					"to_date": "2099-12-31",
+					"rate": 5.0
+				}
+			]
+		},
+		{
+			"name": "WHT - Share Transfer 2% (ຮ.ຕ. ການໂອນຮຸ້ນ)",
+			"category_name": "Share Transfer",
+			"account_number": "4436",
+			"rates": [
+				{
+					"from_date": "2024-01-01",
+					"to_date": "2099-12-31",
+					"rate": 2.0
+				}
+			]
+		},
+		{
+			"name": "WHT - Construction & Repair 5% (ຮ.ຕ. ກໍ່ສ້າງ)",
+			"category_name": "Construction",
+			"account_number": "4437",
+			"rates": [
+				{
+					"from_date": "2024-01-01",
+					"to_date": "2026-06-30",
+					"rate": 2.0
+				},
+				{
+					"from_date": "2026-07-01",
+					"to_date": "2099-12-31",
+					"rate": 5.0
+				}
+			]
+		},
+		{
+			"name": "WHT - Sports & Performing Arts 5% (ຮ.ຕ. ກີລາ ແລະ ສິລະປະ)",
+			"category_name": "Sports & Performing Arts",
+			"account_number": "4439",
+			"rates": [
+				{
+					"from_date": "2024-01-01",
+					"to_date": "2026-06-30",
+					"rate": 10.0
+				},
+				{
+					"from_date": "2026-07-01",
+					"to_date": "2099-12-31",
+					"rate": 5.0
+				}
+			]
+		},
+		{
+			"name": "WHT - Online Sales 10% (ຮ.ຕ. ຂາຍອອນລາຍ)",
+			"category_name": "E-commerce",
+			"account_number": "4438",
+			"rates": [
+				{
+					"from_date": "2024-01-01",
+					"to_date": "2026-06-30",
+					"rate": 2.0
+				},
+				{
+					"from_date": "2026-07-01",
+					"to_date": "2099-12-31",
+					"rate": 10.0
+				}
+			]
+		}
+	],
+	"item_tax_templates": [
+		{
+			"title": "Lao VAT 10% (ອາກອນ 10%)",
+			"_why": "The default treatment. Only needed on a line that must differ from its invoice's header type.",
+			"taxes": [
+				{
+					"account_number": "4412",
+					"tax_rate": 10.0
+				}
+			]
+		},
+		{
+			"title": "Lao VAT 0% — Export (ສົ່ງອອກ 0%)",
+			"_why": "Zero-rated on an export invoice. On a domestic invoice a 0% line is declared as exempt, not as an export.",
+			"taxes": [
+				{
+					"account_number": "4412",
+					"tax_rate": 0.0
+				}
+			]
+		},
+		{
+			"title": "Lao VAT Exempt (ຍົກເວັ້ນ)",
+			"_why": "For a line that bears no VAT on an otherwise standard invoice — the case the VAT return could not represent before per-line classification.",
+			"taxes": [
+				{
+					"account_number": "4412",
+					"tax_rate": 0.0
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,39 @@
+{
+	"_comment": [
+		"Lao profit tax (CIT) rates, as dated rows — same convention as lao_tax_templates.json.",
+		"A statutory rate change is a NEW ROW, never an edit, so that a period before the",
+		"change is still assessed at the rate that was in force during it.",
+		"",
+		"Source: Law on Income Tax No. 88/NA, gazetted 19 June 2026, in force 1 July 2026.",
+		"It cut the standard rate from 24% to 20% and replaced the previous activity-based",
+		"treatment of microenterprises with a uniform 5% on NET PROFIT.",
+		"",
+		"NOT MODELLED, deliberately: the special rates for listed companies (10%), tobacco",
+		"and alcohol (22%), mining concessions (35%), casinos (30%) and MNC group members",
+		"(15%). Each needs a qualification test this app cannot make on its own. A company",
+		"on one of those regimes must not rely on the estimate this data drives.",
+		"",
+		"ALSO NOT MODELLED: the lump-sum (turnover-based) regime. It is available only to",
+		"businesses that do NOT maintain Lao accounting books — which a business running",
+		"this software does. See docs/BERP-LAO-TAXRIS-001.md and the roadmap note."
+	],
+	"regimes": [
+		{
+			"regime": "Standard",
+			"label": "Standard profit tax",
+			"basis": "net_profit",
+			"rates": [
+				{ "from_date": "2024-01-01", "to_date": "2026-06-30", "rate": 24.0 },
+				{ "from_date": "2026-07-01", "to_date": "2099-12-31", "rate": 20.0 }
+			]
+		},
+		{
+			"regime": "Micro-enterprise",
+			"label": "Microenterprise profit tax",
+			"basis": "net_profit",
+			"rates": [
+				{ "from_date": "2026-07-01", "to_date": "2099-12-31", "rate": 5.0 }
+			]
+		}
+	]
+}

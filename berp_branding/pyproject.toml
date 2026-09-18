@@ -1,0 +1,35 @@
+[project]
+name = "berp_branding"
+authors = [
+    { name = "BSTBizEra", email = "dev@bstbizera.com" },
+]
+description = "bERP platform branding and per-tenant white-label for Frappe/ERPNext"
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/bstBizEra/BERP-Branding"
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "berp_branding"
+
+[tool.bench.frappe-dependencies]
+frappe = ">=15.0.0,<17.0.0"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "I", "UP", "B", "RUF"]
+ignore = ["B017", "B023", "B904", "E101", "E501", "F401", "W191", "RUF001", "RUF002", "RUF003"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "tab"

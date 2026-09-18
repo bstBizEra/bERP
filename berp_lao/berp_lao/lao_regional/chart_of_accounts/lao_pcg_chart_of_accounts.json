@@ -1,0 +1,444 @@
+{
+ "country_code": "la",
+ "name": "Lao Standard PCG",
+ "disabled": "No",
+ "tree": {
+  "1 Capital & Reserves (ທຶນ ແລະ ທຶນສະສົມ)": {
+   "root_type": "Equity",
+   "is_group": 1,
+   "Share Capital (ທຶນຈດທະບຽນ)": {
+    "account_number": "10",
+    "is_group": 1,
+    "Ordinary Shares": {
+     "account_number": "1011"
+    },
+    "Preference Shares": {
+     "account_number": "1012"
+    }
+   },
+   "Share Premium (ທຶນສ່ວນເກີນ)": {
+    "account_number": "11"
+   },
+   "Revaluation Reserve": {
+    "account_number": "12"
+   },
+   "Retained Earnings (ກໍາໄລສະສົມ)": {
+    "account_number": "13",
+    "is_group": 1,
+    "Retained Earnings b/f": {
+     "account_number": "1301"
+    },
+    "Current Year P&L": {
+     "account_number": "1302"
+    }
+   },
+   "Long-term Provisions": {
+    "account_number": "15"
+   }
+  },
+  "1 Non-Current Liabilities (ໜີ້ສິນໄລຍະຍາວ)": {
+   "root_type": "Liability",
+   "is_group": 1,
+   "Long-term Borrowings (ເງິນກູ້ຢືມໄລຍະຍາວ)": {
+    "account_number": "16",
+    "is_group": 1,
+    "Bank Loans": {
+     "account_number": "1611"
+    },
+    "Bonds Issued": {
+     "account_number": "1612"
+    }
+   }
+  },
+  "2 Non-Current Assets (ຊັບສິນຖາວອນ)": {
+   "root_type": "Asset",
+   "is_group": 1,
+   "Intangible Assets (ຊັບສິນໄຮ້ຕົວຕົນ)": {
+    "account_number": "20",
+    "is_group": 1,
+    "Goodwill": {
+     "account_number": "2011"
+    },
+    "Software & Licenses": {
+     "account_number": "2012"
+    },
+    "Accum. Amort. Intangibles": {
+     "account_number": "2029",
+     "account_type": "Accumulated Depreciation"
+    }
+   },
+   "Land & Buildings (ທີ່ດິນ ແລະ ສິ່ງກໍ່ສ້າງ)": {
+    "account_number": "21",
+    "account_type": "Fixed Asset",
+    "is_group": 1,
+    "Land": {
+     "account_number": "2111",
+     "account_type": "Fixed Asset"
+    },
+    "Buildings": {
+     "account_number": "2112",
+     "account_type": "Fixed Asset"
+    }
+   },
+   "Plant & Machinery (ເຄື່ອງຈັກ)": {
+    "account_number": "22",
+    "account_type": "Fixed Asset"
+   },
+   "Office Equipment & Furniture": {
+    "account_number": "23",
+    "account_type": "Fixed Asset"
+   },
+   "Vehicles (ຍານພາຫະນະ)": {
+    "account_number": "24",
+    "account_type": "Fixed Asset"
+   },
+   "Accumulated Depreciation (ຄ່າເສື່ອມລາຄາສະສົມ)": {
+    "account_number": "28",
+    "is_group": 1,
+    "Accum. Depr. Buildings": {
+     "account_number": "2811",
+     "account_type": "Accumulated Depreciation"
+    },
+    "Accum. Depr. Machinery": {
+     "account_number": "2821",
+     "account_type": "Accumulated Depreciation"
+    },
+    "Accum. Depr. Vehicles": {
+     "account_number": "2841",
+     "account_type": "Accumulated Depreciation"
+    }
+   }
+  },
+  "3 Inventories (ສິນຄ້າ ແລະ ວັດຖຸ)": {
+   "root_type": "Asset",
+   "is_group": 1,
+   "Goods for Resale (ສິນຄ້າ)": {
+    "account_number": "30",
+    "account_type": "Stock"
+   },
+   "Raw Materials (ວັດຖຸດິບ)": {
+    "account_number": "31",
+    "account_type": "Stock"
+   },
+   "Work in Progress (ສິນຄ້າກໍາລັງຜະລິດ)": {
+    "account_number": "33",
+    "account_type": "Stock"
+   },
+   "Finished Goods (ສິນຄ້າສໍາເລັດ)": {
+    "account_number": "35",
+    "account_type": "Stock"
+   },
+   "Goods in Transit": {
+    "account_number": "37",
+    "account_type": "Stock"
+   }
+  },
+  "4 Third-Party Accounts — Assets (ບັນຊີຄູ່ຄ້າ ຝ່າຍຊັບສິນ)": {
+   "root_type": "Asset",
+   "is_group": 1,
+   "Accounts Receivable (ລູກໜີ້ການຄ້າ)": {
+    "account_number": "41",
+    "account_type": "Receivable",
+    "is_group": 1,
+    "Trade Debtors - Local": {
+     "account_number": "4111",
+     "account_type": "Receivable"
+    },
+    "Trade Debtors - Foreign": {
+     "account_number": "4112",
+     "account_type": "Receivable"
+    }
+   },
+   "44 Government & Tax Receivable (ອາກອນຮັບ)": {
+    "is_group": 1,
+    "VAT Input Tax (ອາກອນ VAT ຊື້)": {
+     "account_number": "4411",
+     "account_type": "Tax"
+    }
+   },
+   "48 Prepayments (ຄ່າໃຊ້ຈ່າຍລ່ວງໜ້າ)": {
+    "is_group": 1,
+    "Prepaid Expenses (ຄ່າໃຊ້ຈ່າຍລ່ວງໜ້າ)": {
+     "account_number": "4811"
+    }
+   }
+  },
+  "4 Third-Party Accounts — Liabilities (ບັນຊີຄູ່ຄ້າ ຝ່າຍໜີ້ສິນ)": {
+   "root_type": "Liability",
+   "is_group": 1,
+   "Accounts Payable (ເຈົ້າໜີ້ການຄ້າ)": {
+    "account_number": "40",
+    "account_type": "Payable",
+    "is_group": 1,
+    "Trade Creditors - Local": {
+     "account_number": "4011",
+     "account_type": "Payable"
+    },
+    "Trade Creditors - Foreign": {
+     "account_number": "4012",
+     "account_type": "Payable"
+    },
+    "Goods Received Not Invoiced (ສິນຄ້າຮັບແລ້ວ ຍັງບໍ່ທັນໄດ້ໃບບິນ)": {
+     "account_number": "4013",
+     "account_type": "Stock Received But Not Billed"
+    },
+    "Assets Received Not Invoiced (ຊັບສິນຮັບແລ້ວ ຍັງບໍ່ທັນໄດ້ໃບບິນ)": {
+     "account_number": "4014",
+     "account_type": "Asset Received But Not Billed"
+    }
+   },
+   "Employee & Payroll Accounts": {
+    "account_number": "43",
+    "is_group": 1,
+    "Salaries Payable": {
+     "account_number": "4311"
+    },
+    "NSSF Payable (ປະກັນສັງຄົມ)": {
+     "account_number": "4312"
+    }
+   },
+   "44 Government & Tax Payable (ອາກອນຕ້ອງມອບ)": {
+    "is_group": 1,
+    "VAT Output Tax (ອາກອນ VAT ຂາຍ)": {
+     "account_number": "4412",
+     "account_type": "Tax"
+    },
+    "VAT Payable Net": {
+     "account_number": "4413",
+     "account_type": "Tax"
+    },
+    "Income Tax Payable (ອາກອນລາຍໄດ້)": {
+     "account_number": "4421",
+     "account_type": "Tax"
+    },
+    "WHT Payable - Services 10% (ອາກອນຫັກໜ້າ)": {
+     "account_number": "4431",
+     "account_type": "Tax"
+    },
+    "WHT Payable - Dividends 10%": {
+     "account_number": "4432",
+     "account_type": "Tax"
+    },
+    "WHT Payable - Rent 10%": {
+     "account_number": "4433",
+     "account_type": "Tax"
+    },
+    "WHT Payable - Teaching 5%": {
+     "account_number": "4434",
+     "account_type": "Tax"
+    },
+    "WHT Payable - Royalties 5% (ອາກອນຫັກ ຄ່າລິຂະສິດ)": {
+     "account_number": "4435",
+     "account_type": "Tax"
+    },
+    "WHT Payable - Share Transfer 2% (ອາກອນຫັກ ການໂອນຮຸ້ນ)": {
+     "account_number": "4436",
+     "account_type": "Tax"
+    },
+    "WHT Payable - Construction & Repair 5% (ອາກອນຫັກ ກໍ່ສ້າງ ແລະ ສ້ອມແປງ)": {
+     "account_number": "4437",
+     "account_type": "Tax"
+    },
+    "WHT Payable - E-commerce 10% (ອາກອນຫັກ ຂາຍອອນລາຍ)": {
+     "account_number": "4438",
+     "account_type": "Tax"
+    },
+    "WHT Payable - Sports & Performing Arts 5% (ອາກອນຫັກ ກີລາ ແລະ ສິລະປະການສະແດງ)": {
+     "account_number": "4439",
+     "account_type": "Tax"
+    }
+   },
+   "48 Accruals (ຄ່າໃຊ້ຈ່າຍຄ້າງຈ່າຍ)": {
+    "is_group": 1,
+    "Accrued Expenses": {
+     "account_number": "4821"
+    }
+   }
+  },
+  "5 Financial Accounts (ບັນຊີການເງິນ)": {
+   "root_type": "Asset",
+   "is_group": 1,
+   "Cash at Bank (ເງິນຝາກທະນາຄານ)": {
+    "account_number": "51",
+    "account_type": "Bank",
+    "is_group": 1,
+    "BCEL Current Account (LAK)": {
+     "account_number": "5111",
+     "account_type": "Bank"
+    },
+    "BCEL Current Account (USD)": {
+     "account_number": "5112",
+     "account_type": "Bank"
+    },
+    "LDB Current Account (LAK)": {
+     "account_number": "5121",
+     "account_type": "Bank"
+    }
+   },
+   "Petty Cash (ເງິນສົດຍ່ອຍ)": {
+    "account_number": "54",
+    "account_type": "Cash",
+    "is_group": 1,
+    "Head Office Petty Cash": {
+     "account_number": "5401",
+     "account_type": "Cash"
+    },
+    "Branch Petty Cash": {
+     "account_number": "5402",
+     "account_type": "Cash"
+    }
+   }
+  },
+  "6 Expense Accounts (ບັນຊີລາຍຈ່າຍ)": {
+   "root_type": "Expense",
+   "is_group": 1,
+   "Cost of Purchases / COGS (ຕົ້ນທຶນ)": {
+    "account_number": "60",
+    "account_type": "Cost of Goods Sold",
+    "is_group": 1,
+    "Cost of Goods Sold": {
+     "account_number": "6011",
+     "account_type": "Cost of Goods Sold"
+    },
+    "Freight & Import Costs": {
+     "account_number": "6012",
+     "account_type": "Cost of Goods Sold"
+    }
+   },
+   "External Services": {
+    "account_number": "61",
+    "is_group": 1,
+    "Subcontracting": {
+     "account_number": "6111"
+    },
+    "Professional Fees": {
+     "account_number": "6121"
+    }
+   },
+   "Other External Expenses": {
+    "account_number": "62",
+    "is_group": 1,
+    "Rent & Lease (ຄ່າເຊົ່າ)": {
+     "account_number": "6211"
+    },
+    "Insurance Premiums": {
+     "account_number": "6221"
+    },
+    "Advertising & Marketing": {
+     "account_number": "6231"
+    },
+    "Transport & Delivery": {
+     "account_number": "6241"
+    },
+    "Utilities (ຄ່ານ້ໍາ, ໄຟ)": {
+     "account_number": "6251"
+    },
+    "Telecommunications": {
+     "account_number": "6261"
+    },
+    "Banking Charges": {
+     "account_number": "6271",
+     "account_type": "Expense Account"
+    }
+   },
+   "Personnel Expenses (ຄ່າແຮງງານ)": {
+    "account_number": "63",
+    "is_group": 1,
+    "Salaries & Wages": {
+     "account_number": "6311"
+    },
+    "NSSF Employer Contribution": {
+     "account_number": "6312"
+    },
+    "Staff Benefits": {
+     "account_number": "6313"
+    }
+   },
+   "Depreciation & Amortisation": {
+    "account_number": "64",
+    "account_type": "Depreciation",
+    "is_group": 1,
+    "Depreciation of PP&E": {
+     "account_number": "6411",
+     "account_type": "Depreciation"
+    },
+    "Amortisation of Intangibles": {
+     "account_number": "6421",
+     "account_type": "Depreciation"
+    }
+   },
+   "Financial Expenses": {
+    "account_number": "67",
+    "is_group": 1,
+    "Interest on Loans": {
+     "account_number": "6711"
+    },
+    "Foreign Exchange Losses": {
+     "account_number": "6721"
+    }
+   },
+   "Tax Expenses": {
+    "account_number": "69",
+    "is_group": 1,
+    "Profit Tax (ອາກອນລາຍໄດ້ທຸລະກິດ)": {
+     "account_number": "6911"
+    }
+   }
+  },
+  "7 Revenue Accounts (ບັນຊີລາຍໄດ້)": {
+   "root_type": "Income",
+   "is_group": 1,
+   "Sales Revenue (ລາຍໄດ້ຈາກການຂາຍ)": {
+    "account_number": "70",
+    "account_type": "Income Account",
+    "is_group": 1,
+    "Product Sales - Local": {
+     "account_number": "7011",
+     "account_type": "Income Account"
+    },
+    "Product Sales - Export (0% VAT)": {
+     "account_number": "7012",
+     "account_type": "Income Account"
+    },
+    "Service Revenue - Local": {
+     "account_number": "7021",
+     "account_type": "Income Account"
+    },
+    "Service Revenue - Export": {
+     "account_number": "7022",
+     "account_type": "Income Account"
+    }
+   },
+   "Other Operating Income": {
+    "account_number": "75",
+    "account_type": "Income Account"
+   },
+   "Financial Income": {
+    "account_number": "76",
+    "account_type": "Income Account",
+    "is_group": 1,
+    "Interest Income": {
+     "account_number": "7611",
+     "account_type": "Income Account"
+    },
+    "Foreign Exchange Gains": {
+     "account_number": "7621",
+     "account_type": "Income Account"
+    }
+   }
+  },
+  "8 Special & Off-Balance (ພິເສດ)": {
+   "root_type": "Equity",
+   "is_group": 1,
+   "P&L Summary Account (ກໍາໄລ/ຂາດທຶນ ປີປັດຈຸບັນ)": {
+    "account_number": "86"
+   },
+   "Tax on Profit": {
+    "account_number": "87"
+   },
+   "Net Income for the Year": {
+    "account_number": "88"
+   }
+  }
+ }
+}

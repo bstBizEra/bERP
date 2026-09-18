@@ -1,0 +1,124 @@
+{
+	"Company": [
+		{
+			"fieldname": "lao_tax_id",
+			"fieldtype": "Data",
+			"label": "Lao Tax ID (ເລກປະຈຳຕົວ)",
+			"insert_after": "tax_id",
+			"description": "Lao Revenue Department Tax Identification Number (TIN)",
+			"_why": "Distinct from ERPNext's own tax_id, which tenants use for other jurisdictions. Sits immediately after it so the two read as a pair."
+		},
+		{
+			"fieldname": "lao_business_registration",
+			"fieldtype": "Data",
+			"label": "Business Registration No. (ທະບີນວິສາຫະກິດ)",
+			"insert_after": "lao_tax_id"
+		},
+		{
+			"fieldname": "lao_province",
+			"fieldtype": "Link",
+			"label": "Province (ແຂວງ)",
+			"options": "Lao Province",
+			"insert_after": "lao_business_registration"
+		},
+		{
+			"fieldname": "lao_not_vat_registered",
+			"fieldtype": "Check",
+			"label": "Not VAT Registered — Micro-enterprise (ບໍ່ໄດ້ຈົດທະບຽນ VAT)",
+			"description": "Tick for a micro-enterprise below the VAT registration threshold. Suppresses the VAT checks on invoices for this company.",
+			"insert_after": "lao_province",
+			"_why": "Micro-enterprises are excluded from automatic VAT registration and pay a flat 5% CIT on net profit under Law No. 88/NA. They are 94.2% of Lao enterprises by count, so every VAT prompt in this app is wrong for them."
+		},
+		{
+			"fieldname": "lao_profit_tax_regime",
+			"fieldtype": "Select",
+			"label": "Profit Tax Regime (ລະບອບອາກອນກຳໄລ)",
+			"options": "Standard\nMicro-enterprise",
+			"default": "Standard",
+			"insert_after": "lao_not_vat_registered",
+			"description": "Standard = 20% on net profit. Micro-enterprise = 5% on net profit under Law on Income Tax No. 88/NA. Set by your accountant — this app does not test the qualification.",
+			"_why": "Separate from lao_not_vat_registered on purpose. VAT registration and profit tax regime are different facts with different consequences, and a company can be one without the other. Defaults to Standard, never to the cheaper regime: an unset field must not silently reduce someone's tax. The lump-sum (turnover) regime is deliberately not an option — it is available only to businesses that do NOT keep accounting books, which a business running this software does."
+		},
+		{
+			"fieldname": "lao_per_company_invoice_numbering",
+			"fieldtype": "Check",
+			"label": "Number Sales Invoices per Company (ເລກໃບເກັບເງິນແຍກຕາມບໍລິສັດ)",
+			"default": "0",
+			"insert_after": "lao_profit_tax_regime",
+			"description": "Give this company its own invoice sequence, so its numbers are contiguous rather than interleaved with other companies on this site. TURNING THIS ON STARTS A NEW SEQUENCE AT 1 — existing invoices keep their numbers, so there is one deliberate break. Discuss with your accountant first.",
+			"_why": "Frappe keeps ONE counter per naming-series prefix per SITE — measured: tabSeries has a single row 'ACC-SINV-2026-' with no company in the key. Two companies on one site therefore interleave, and neither has a gapless sequence of its own, which is hard to explain to an auditor under any rule. Off by default because switching a live company's numbering is a decision, not a default, and because Q9 in BERP-LAO-QUESTIONS-001 may yet make the whole question moot."
+		}
+	],
+	"Customer": [
+		{
+			"fieldname": "lao_tax_id",
+			"fieldtype": "Data",
+			"label": "Lao Tax ID (ເລກປະຈຳຕົວ)",
+			"insert_after": "tax_id"
+		},
+		{
+			"fieldname": "lao_province",
+			"fieldtype": "Link",
+			"label": "Province (ແຂວງ)",
+			"options": "Lao Province",
+			"insert_after": "territory"
+		},
+		{
+			"fieldname": "lao_district",
+			"fieldtype": "Link",
+			"label": "District (ເມືອງ)",
+			"options": "Lao District",
+			"insert_after": "lao_province"
+		}
+	],
+	"Supplier": [
+		{
+			"fieldname": "lao_tax_id",
+			"fieldtype": "Data",
+			"label": "Lao Tax ID (ເລກປະຈຳຕົວ)",
+			"insert_after": "tax_id"
+		},
+		{
+			"fieldname": "lao_province",
+			"fieldtype": "Link",
+			"label": "Province (ແຂວງ)",
+			"options": "Lao Province",
+			"insert_after": "supplier_type"
+		},
+		{
+			"fieldname": "lao_district",
+			"fieldtype": "Link",
+			"label": "District (ເມືອງ)",
+			"options": "Lao District",
+			"insert_after": "lao_province"
+		}
+	],
+	"Sales Invoice": [
+		{
+			"fieldname": "lao_vat_section",
+			"fieldtype": "Section Break",
+			"label": "Lao Tax Information (ຂໍ້ມູນອາກອນ)",
+			"insert_after": "taxes_and_charges",
+			"collapsible": 1
+		},
+		{
+			"fieldname": "lao_customer_tax_id",
+			"fieldtype": "Data",
+			"label": "Customer Tax ID (ເລກປະຈຳຕົວລູກຄ້າ)",
+			"insert_after": "lao_vat_section",
+			"fetch_from": "customer.lao_tax_id",
+			"fetch_if_empty": 1,
+			"_why": "Fetched from the Customer but editable: a Lao invoice must carry the TIN as it stood when the invoice was issued, not as the customer record reads today."
+		},
+		{
+			"fieldname": "lao_invoice_type",
+			"fieldtype": "Select",
+			"label": "Invoice Type (ປະເພດໃບເກັບເງິນ)",
+			"options": "Standard\nExport (0%)\nVAT Exempt\nSimplified",
+			"insert_after": "lao_customer_tax_id",
+			"default": "Standard",
+			"in_standard_filter": 1,
+			"_why": "Drives the VAT rules and the VAT return's split. 'Simplified' is treated as standard-rated throughout — it is a documentation concession, not a rate."
+		}
+	]
+}

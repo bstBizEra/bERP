@@ -1,0 +1,49 @@
+[project]
+name = "berp_lao"
+authors = [
+    { name = "BSTBizEra", email = "dev@bstbizera.com" },
+]
+description = "Lao PDR localisation for ERPNext — PCG Chart of Accounts, VAT 10%, WHT, provinces/districts/villages, Phetsarath OT typography"
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/bstBizEra/berp_lao_app"
+Repository = "https://github.com/bstBizEra/berp_lao_app.git"
+Issues = "https://github.com/bstBizEra/berp_lao_app/issues"
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "berp_lao"
+
+[tool.bench.frappe-dependencies]
+frappe = ">=15.0.0,<17.0.0"
+erpnext = ">=15.0.0,<17.0.0"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "I", "UP", "B", "RUF"]
+ignore = [
+    "B017", # assertRaises(Exception) is fine in Frappe tests
+    "B023", # function definition does not bind loop variable
+    "B904", # raise from — Frappe throws do not carry causes
+    "E101", # Frappe code is tab-indented
+    "E501", # long Lao/English bilingual strings
+    "F401", # unused imports are common in Frappe hook modules
+    "W191", # tab indentation is the Frappe house style
+    "RUF001", # Lao script triggers ambiguous-unicode false positives
+    "RUF002",
+    "RUF003",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "tab"

@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "autoname": "field:province_name_en",
+ "creation": "2026-07-23 09:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "province_name_en",
+  "province_name_lo",
+  "province_code",
+  "column_break_1",
+  "capital",
+  "capital_lo",
+  "districts_count",
+  "section_break_2",
+  "region",
+  "latitude",
+  "longitude"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "province_name_en",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Province Name (English)",
+   "reqd": 1,
+   "search_index": 1,
+   "unique": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "province_name_lo",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "ຊື່ແຂວງ (ພາສາລາວ)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "province_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Province Code",
+   "length": 10
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "capital",
+   "fieldtype": "Data",
+   "label": "Capital City (English)"
+  },
+  {
+   "fieldname": "capital_lo",
+   "fieldtype": "Data",
+   "label": "ເມືອງຫຼວງ (ລາວ)"
+  },
+  {
+   "fieldname": "districts_count",
+   "fieldtype": "Int",
+   "label": "Number of Districts",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Geographic Info"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Select",
+   "label": "Region",
+   "options": "North\nCentral\nSouth"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude",
+   "precision": "6"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude",
+   "precision": "6"
+  }
+ ],
+ "icon": "fa fa-map-marker",
+ "modified": "2026-07-23 09:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Lao Regional",
+ "name": "Lao Province",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "province_name_en",
+ "sort_order": "ASC",
+ "title_field": "province_name_lo",
+ "track_changes": 0
+}

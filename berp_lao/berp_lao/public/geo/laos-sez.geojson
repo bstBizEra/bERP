@@ -1,0 +1,12 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"name":"Boten Beautiful Land SEZ","name_lo":"ເຂດເສດຖະກິດພິເສດ ບໍ່ເຕັນ","prov":"Luang Namtha"},"geometry":{"type":"Point","coordinates":[101.6850,21.2980]}},
+{"type":"Feature","properties":{"name":"Golden Triangle SEZ","name_lo":"ເຂດສາມຫຼ່ຽມຄຳ","prov":"Bokeo"},"geometry":{"type":"Point","coordinates":[100.1100,20.3550]}},
+{"type":"Feature","properties":{"name":"Saysettha Development Zone","name_lo":"ເຂດພັດທະນາ ໄຊເສດຖາ","prov":"Vientiane Capital"},"geometry":{"type":"Point","coordinates":[102.7800,18.0500]}},
+{"type":"Feature","properties":{"name":"VITA Park (Vientiane Ind. & Trade)","name_lo":"ວິຕາ ພາກ","prov":"Vientiane Capital"},"geometry":{"type":"Point","coordinates":[102.7050,17.9300]}},
+{"type":"Feature","properties":{"name":"That Luang Lake SEZ","name_lo":"ບຶງທາດຫຼວງ","prov":"Vientiane Capital"},"geometry":{"type":"Point","coordinates":[102.6450,17.9700]}},
+{"type":"Feature","properties":{"name":"Dongphosy SEZ","name_lo":"ດົງໂພສີ","prov":"Vientiane Capital"},"geometry":{"type":"Point","coordinates":[102.7250,17.9250]}},
+{"type":"Feature","properties":{"name":"Savan-Seno SEZ","name_lo":"ສະຫວັນ-ເຊໂນ","prov":"Savannakhet"},"geometry":{"type":"Point","coordinates":[104.7600,16.5500]}},
+{"type":"Feature","properties":{"name":"Thakhek SEZ","name_lo":"ທ່າແຂກ","prov":"Khammouane"},"geometry":{"type":"Point","coordinates":[104.8350,17.4000]}},
+{"type":"Feature","properties":{"name":"Champasak SEZ","name_lo":"ຈຳປາສັກ","prov":"Champasak"},"geometry":{"type":"Point","coordinates":[105.7800,15.1200]}},
+{"type":"Feature","properties":{"name":"Luang Prabang SEZ","name_lo":"ຫຼວງພະບາງ","prov":"Luang Prabang"},"geometry":{"type":"Point","coordinates":[102.1400,19.8800]}}
+]}

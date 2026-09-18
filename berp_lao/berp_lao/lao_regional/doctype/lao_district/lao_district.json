@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-07-23 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "district_name_lo",
+  "district_name_en",
+  "province",
+  "district_code",
+  "latitude",
+  "longitude"
+ ],
+ "fields": [
+  {
+   "fieldname": "district_name_lo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "District Name (Lao / ຊື່ເມືອງ)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "district_name_en",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "District Name (English)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "province",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Province (ແຂວງ)",
+   "options": "Lao Province",
+   "reqd": 1
+  },
+  {
+   "fieldname": "district_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "District Code"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-23 12:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Lao Regional",
+ "name": "Lao District",
+ "naming_rule": "By fieldname",
+ "autoname": "field:district_name_en",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

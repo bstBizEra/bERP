@@ -1,0 +1,98 @@
+/* Copyright (c) 2026, BizEra / BSTBizEra and contributors
+   License: GNU General Public License v3. See license.txt
+   The font files themselves are SIL OFL 1.1 — see public/fonts/README.md.
+
+   ─────────────────────────────────────────────────────────────────────────────
+   Lao typography for the Desk.
+
+   The fonts are served from this app, not from Google Fonts. Three reasons, in
+   order of weight:
+
+     1. A bench may have no egress to fonts.googleapis.com — berp-linux and any
+        on-prem customer plausibly do not. Lao script then renders as boxes.
+     2. wkhtmltopdf fetching a remote stylesheet mid-render is slow at best and
+        silently falls back at worst.
+     3. A pinned TTF renders the same in 2029 as it does today. A CDN family
+        makes no such promise.
+
+   ⚠ This file reaches the DESK ONLY, and that is the whole of its job.
+   `app_include_css` is not part of Frappe's print pipeline — see
+   frappe/www/printview.py:get_print_style — but do NOT copy these @font-face
+   rules into a print format to compensate.
+
+   The contract, narrowed to what was actually measured: for server-generated
+   bERP PDFs on the supported wkhtmltopdf stack, Lao typography MUST NOT depend
+   on CSS @font-face. Measured on wkhtmltopdf 0.12.6, same HTML, only the
+   @font-face block differing, fonts installed on the machine in both runs:
+
+       with @font-face        embedded: DejaVuSans          text: "—"
+       without, font present  embedded: Phetsarath-Regular  text: ໜຶ່ງລ້ານສອງແສນກີບຖ້ວນ
+
+   That is a statement about this rendering stack, not about every wkhtmltopdf
+   build — @font-face is reported to work for some fonts and fail for others
+   across versions, formats and platforms, and that inconsistency is itself a
+   reason not to make it part of the production contract.
+
+   Print gets its fonts from the server. See scripts/install-lao-fonts.sh and
+   berp_lao.lao_regional.fonts.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* ─── @font-face — for the browser. Print does not use these. ──────────────── */
+
+@font-face {
+	font-family: "Phetsarath";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/assets/berp_lao/fonts/Phetsarath-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Phetsarath";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("/assets/berp_lao/fonts/Phetsarath-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Noto Sans Lao";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/assets/berp_lao/fonts/NotoSansLao-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Noto Sans Lao";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("/assets/berp_lao/fonts/NotoSansLao-Bold.ttf") format("truetype");
+}
+
+/* ─── The two fallback chains ──────────────────────────────────────────────────
+   Documents lead with Phetsarath: it is the official Lao government font and is
+   what a tax office expects to see. Phetsarath covers 65 codepoints in the Lao
+   block against Noto Sans Lao's 83, so Noto follows it everywhere as the wider
+   net. `Saysettha OT` is a third fallback that is commonly installed on Lao
+   desktops and costs nothing to name.
+
+   The UI chain leads with Noto Sans Lao, which is built for screen legibility at
+   small sizes and covers more of the block.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+:root {
+	--berp-lao-font-document: "Phetsarath", "Noto Sans Lao", "Saysettha OT", serif;
+	--berp-lao-font-ui: "Noto Sans Lao", "Phetsarath", "Saysettha OT", sans-serif;
+}
+
+.print-format.lao-document,
+.print-format.lao-document * {
+	font-family: var(--berp-lao-font-document);
+}
+
+[lang="lo"],
+.lao-text {
+	font-family: var(--berp-lao-font-ui);
+}
